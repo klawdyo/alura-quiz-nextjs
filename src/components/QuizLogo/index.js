@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
-import React from 'react';
-import PropTypes from 'prop-types';
+// import React from 'react';
+// import PropTypes from 'prop-types';
 
 function Logo({ className, color }) {
   return (
@@ -29,9 +29,9 @@ function Logo({ className, color }) {
   );
 }
 
-Logo.propTypes = {
-  className: PropTypes.string.isRequired,
-};
+// Logo.propTypes = {
+//   className: PropTypes.string.isRequired,
+// };
 
 const QuizLogo = styled(Logo)`
   margin: auto;
