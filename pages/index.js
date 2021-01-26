@@ -30,10 +30,11 @@ export const QuizContainer = styled.div`
 
 
 export default function Home() {
+  console.log('cor no home', db.theme.colors.contrastText)
   return (
     <QuizBackground backgroundImage={db.bg}>
       <QuizContainer>
-      <QuizLogo color={db.contrastText} />
+      <QuizLogo color={db.theme.colors.contrastText} />
         <Widget>
           <Widget.Header>
             <h1>{db.title}</h1>
