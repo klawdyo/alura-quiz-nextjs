@@ -1,6 +1,6 @@
 import { createGlobalStyle, ThemeProvider } from 'styled-components'
 import db from '../db.json'
-import Header from 'next/head'
+import Head from 'next/head'
 
 const GlobalStyle = createGlobalStyle`
   *{
@@ -29,12 +29,14 @@ const theme = db.theme;
 export default function App({ Component, pageProps }) {
   return (
     <>
-      <Header>
+      <Head>
+        <title>{db.title}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
         <meta property="og:image" content={db.bg} />
         <meta property="og:url" content={db.external} />
         <meta property="og:title" content={db.title} />
         <meta property="og:description" content={db.description} />
-      </Header>
+      </Head>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
         <Component {...pageProps} />

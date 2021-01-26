@@ -1,7 +1,7 @@
 {
-  "bg":"https://articles.gamerheadquarters.com/images/top10/movies/10.jpg",
-  "title":"Título do quiz",
-  "description":"Desrição do seu quiz",
+  "bg":"https://images.alphacoders.com/712/thumb-1920-712495.jpg",
+  "title":"Star Trek",
+  "description":"Então você acha que sabe tudo sobre Star Trek? Venha me provar respondendo ao meu quiz.",
   "questions":[
     {
       "image":"https://placehold.it/400x400",
@@ -31,12 +31,13 @@
   "external":"https://aluraquiz.klawdyo.vercel.app",
   "theme":{
     "colors":{
-      "primary":"#4CAF50",
-      "secondary":"#FF9800",
-      "mainBg":"#1C1814",
+      "primary":"#033d7c",
+      "secondary":"#037cba",
+      "mainBg":"#021b35",
       "contrastText":"#FFFFFF",
-      "wrong":"#FF5722",
-      "success":"#4CAF50"
+      "wrong":"#f51e1e",
+      "success":"#4CAF50",
+      "warning":"#ff9800"
     },
     "borderRadius":""
   }

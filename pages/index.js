@@ -34,16 +34,16 @@ export default function Home() {
       <QuizContainer>
         <Widget>
           <Widget.Header>
-            <h1>The legend of zelda</h1>
+            <h1>{db.title}</h1>
           </Widget.Header>
           <Widget.Content>
-            <p>asiudhaiusdh</p>
+            <p>{db.description}</p>
           </Widget.Content>
         </Widget>
         <Widget>
           <Widget.Content>
             <h1>Quizes da galera</h1>
-            <p>asiudhaiusdh</p>
+            <p>-</p>
           </Widget.Content>
         </Widget>
         <Footer />
