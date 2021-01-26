@@ -3,6 +3,7 @@ import db from '../db.json'
 import Widget from '../src/components/Widget'
 import QuizBackground from '../src/components/QuizBackground'
 import Footer from '../src/components/Footer'
+import QuizLogo from '../src/components/QuizLogo';
 import GithubCorner from '../src/components/GithubCorner'
 
 const Title = styled.h1`
@@ -32,6 +33,7 @@ export default function Home() {
   return (
     <QuizBackground backgroundImage={db.bg}>
       <QuizContainer>
+      <QuizLogo color={db.contrastText} />
         <Widget>
           <Widget.Header>
             <h1>{db.title}</h1>
