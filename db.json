@@ -31,9 +31,9 @@
   "external":"https://aluraquiz.klawdyo.vercel.app",
   "theme":{
     "colors":{
-      "primary":"#033d7c",
+      "primary":"#033d7caa",
       "secondary":"#037cba",
-      "mainBg":"#021b35",
+      "mainBg":"#021b3570",
       "contrastText":"#FFFFFF",
       "wrong":"#f51e1e",
       "success":"#4CAF50",

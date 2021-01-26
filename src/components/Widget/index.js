@@ -23,11 +23,11 @@ p{
 }
 `
 Widget.Header = styled.div`
-display:flex;
-justify-content:flex-start;
-align-items:center;
-padding:18px 32px;
-background-color:${({theme}) => theme.colors.primary}
+  display:flex;
+  justify-content:flex-start;
+  align-items:center;
+  padding:18px 32px;
+  background-color:${({theme}) => theme.colors.primary};
 `
 
 
