@@ -4,27 +4,52 @@
   "description":"Então você acha que sabe tudo sobre Star Trek? Venha me provar respondendo ao meu quiz.",
   "questions":[
     {
-      "image":"https://placehold.it/400x400",
-      "title":"Questão numero 01",
-      "description":"Descrição da questão 01",
-      "answer":1,
+      "title":"Qual o planeta de Saru?",
+      "description":"Saru, capitão da USS Discovery, é originário de qual planeta da Federação?",
+      "image":"https://ovicio.com.br/wp-content/uploads/2021/01/20210118-s1-e4-saru.jpg",
+      "answer":2,
       "alternatives":[
-        "Alternativa A",
-        "Alternativa B",
-        "Alternativa C",
-        "Alternativa D"
+        "Klingon",
+        "Vulcano",
+        "Kaminar",
+        "Orion"
       ]
     },
     {
-      "image":"https://placehold.it/400x400",
-      "title":"Questão numero 02",
-      "description":"Descrição da questão 02",
+      "title":"Michael era primeira oficial de qual nave?",
+      "description":"Esta nave foi destruída no primeiro episódio de USS Discovery",
+      "image":"https://static1.srcdn.com/wordpress/wp-content/uploads/2020/08/Star-Trek-Discovery-Season-3-New-Starfleet-Logo-Michael-Burnham.jpg",
+      "answer":0,
+      "alternatives":[
+        "Shenzong",
+        "Enterprise",
+        "Deep Space Nine",
+        "Voyager"
+      ]
+      
+    },
+    {
+      "title":"Qual o grau de parentesco entre Michael e Spock?",
+      "description":"Eles tinham um grau de relacionamento",
+      "image":"https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/star-trek-discovery-season-2-episode-8-spock-burnham-1553259113.jpg?crop=0.6768734891216761xw:1xh;center,top&resize=768:*",
       "answer":1,
       "alternatives":[
-        "Alternativa A",
-        "Alternativa B",
-        "Alternativa C",
-        "Alternativa D"
+        "Primos",
+        "Irmãos Adotivos",
+        "Pai e filha",
+        "Quem é Spock?"
+      ]
+    },
+    {
+      "title":"Como se chama o motor da Discovery?",
+      "description":"Este motor permite viajar instantaneamente para qualquer ponto do universo",
+      "image":"https://trekmovie.com/wp-content/uploads/2018/02/star-trek-discovery-stamets-connected-to-spore-drive-640x319.jpg",
+      "answer":2,
+      "alternatives":[
+        "Epstein Drive ",
+        "Cochrane Motor",
+        "Motor de Esporos",
+        "Motor de Dobra 9"
       ]
     }
   ],
@@ -39,7 +64,7 @@
       "success":"#4CAF50",
       "warning":"#ff9800"
     },
-    "borderRadius":""
+    "borderRadius":"4px"
   }
 
 }

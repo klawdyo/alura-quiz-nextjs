@@ -1,24 +1,16 @@
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 
-import styled from 'styled-components';
 import db from '../db.json';
-import Widget from '../src/components/Widget';
-import QuizBackground from '../src/components/QuizBackground';
-import Footer from '../src/components/Footer';
-import QuizLogo from '../src/components/QuizLogo';
-import GithubCorner from '../src/components/GithubCorner';
 
-export const QuizContainer = styled.div`
-  width:100%;
-  max-width:350px;
-  padding-top: 45px;
-  margin:auto 10%;
-  @media screen and (max-width: 500px){
-    margin:auto;
-    padding:15px;
-  }
-`;
+import Footer from '../src/components/Footer';
+import Input from '../src/components/Input';
+import Button from '../src/components/Button';
+import GithubCorner from '../src/components/GithubCorner';
+import QuizBackground from '../src/components/QuizBackground';
+import QuizLogo from '../src/components/QuizLogo';
+import QuizContainer from '../src/components/QuizContainer';
+import Widget from '../src/components/Widget';
 
 export default function Home() {
   // Os hooks precisam estar fora das funções
@@ -45,10 +37,11 @@ export default function Home() {
             <p>{db.description}</p>
 
             <form onSubmit={onSubmit}>
-              <input required placeholder="Diz aí seu nome" onChange={(e) => setName(e.target.value)} />
-              <button type="submit" disabled={!name.length}>
+              {/* <Input /> */}
+              <Input name="Nome" value={name} placeholder="Diz aí seu nome" onChange={(e) => setName(e.target.value)} />
+              <Button type="submit" disabled={!name.length}>
                 Jogar {name}
-              </button>
+              </Button>
             </form>
           </Widget.Content>
         </Widget>
