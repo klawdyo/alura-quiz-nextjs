@@ -185,7 +185,7 @@ export default function QuizPage() {
 
   return (
     <QuizBackground backgroundImage={db.bg}>
-      <QuizContainer>{`${results}`}
+      <QuizContainer>
         {/* Logo */}
         <QuizLogo color={db.theme.colors.contrastText} />
         {/* Questões */}
