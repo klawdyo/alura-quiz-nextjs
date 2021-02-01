@@ -48,7 +48,15 @@ export default function Home() {
         <Widget>
           <Widget.Content>
             <h1>Quizes da galera</h1>
-            <p>-</p>
+            <ul>
+              {db.external.map((url) => {
+                const rgx = /https:\/\/([0-9a-z_-]+)\.([0-9a-z_-]+)\.vercel\.app\/?/ig;
+                const [, user = null, project = null] = [...url.matchAll(rgx)][0] || [];
+                return (
+                  <li key={`${user}__${project}`}><Widget.Topic href={url}>{user}/{project}</Widget.Topic></li>
+                );
+              })}
+            </ul>
           </Widget.Content>
         </Widget>
         <Footer />

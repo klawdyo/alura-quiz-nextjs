@@ -53,7 +53,10 @@
       ]
     }
   ],
-  "external":"https://aluraquiz.klawdyo.vercel.app",
+  "external":[
+    "https://1sec-quiz.victoroda.vercel.app", 
+    "https://aluraquiz-coffee.leonardot07.vercel.app/"
+  ],
   "theme":{
     "colors":{
       "primary":"#033d7caa",
