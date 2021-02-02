@@ -19,18 +19,31 @@ const betweenQuestionsTimeout = 2000;
 
 function LoadingWidget() {
   return (
+
     <Widget>
-      <Widget.Header>Carregando...</Widget.Header>
-      <Widget.Content>Aguarde enquanto carregamos as informações do quiz</Widget.Content>
+      <Widget.Header>
+        <h2>
+          Carregando...
+        </h2>
+      </Widget.Header>
+      <Widget.Content>
+        <p>Aguarde enquanto carregamos as informações do quiz</p>
+      </Widget.Content>
     </Widget>
+
   );
 }
 function ResultWidget({ results, onRestartClick }) {
   const resultsLength = results.filter((item) => item).length;
 
   return (
+
     <Widget>
-      <Widget.Header>Finalizado</Widget.Header>
+      <Widget.Header>
+        <h2>
+          Finalizado
+        </h2>
+      </Widget.Header>
       <Widget.Content>
         {!resultsLength && <p>Você não acertou nenhuma questão.</p>}
         {resultsLength && <p>Você acertou {resultsLength} quest{resultsLength <= 1 ? 'ão' : 'ões'}</p>}
@@ -47,6 +60,7 @@ function ResultWidget({ results, onRestartClick }) {
         <Button type="button" onClick={onRestartClick}>Iniciar novamente</Button>
       </Widget.Content>
     </Widget>
+
   );
 }
 
@@ -198,9 +212,10 @@ export default function QuizPage({ externalQuestions, externalBg, externalTheme 
         />
         )}
         {/* Loading */}
-        {screenState === screenStates.LOADING && <LoadingWidget /> }
+        {screenState === screenStates.LOADING && <LoadingWidget theme={externalTheme} /> }
         {screenState === screenStates.RESULT && (
         <ResultWidget
+          theme={externalTheme}
           results={results}
           onRestartClick={onRestartClick}
         />

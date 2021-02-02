@@ -64,7 +64,7 @@
       "mainBg":"#021b3570",
       "contrastText":"#caeff7",
       "wrong":"#f51e1e",
-      "success":"#CCFF00",
+      "success":"#4CAF50",
       "warning":"#ff9800"
     },
     "borderRadius":"4px"

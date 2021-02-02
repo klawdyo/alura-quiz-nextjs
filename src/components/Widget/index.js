@@ -19,7 +19,7 @@ const Widget = styled.div`
     color: ${({ theme }) => theme.colors.contrastText};
   }
 
-  p {
+  p, ul, li {
     font-size: 14px;
     font-weight: 400;
     line-height: 1;
