@@ -1,18 +1,35 @@
 // Usa o themeprovider para sobrescrever o tema do sistema definido em _app
 import { ThemeProvider } from 'styled-components';
+import Head from 'next/head';
 
 import QuizScreen from '../../src/screens/Quiz';
 // import { Container } from './styles';
 
 function QuizDaGaleraPage({ externalDb }) {
   return (
-    <ThemeProvider theme={externalDb.theme}>
-      <QuizScreen
-        externalQuestions={externalDb.questions}
-        externalBg={externalDb.bg}
-        externalTheme={externalDb.theme}
-      />
-    </ThemeProvider>
+    <>
+      <Head>
+        <title>{externalDb.title}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta property="og:image" content={externalDb.bg} />
+        <meta property="og:url" content={externalDb.external} />
+        <meta property="og:title" content={externalDb.title} />
+        <meta property="og:description" content={externalDb.description} />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+          rel="stylesheet"
+        />
+      </Head>
+
+      <ThemeProvider theme={externalDb.theme}>
+        <QuizScreen
+          externalQuestions={externalDb.questions}
+          externalBg={externalDb.bg}
+          externalTheme={externalDb.theme}
+        />
+      </ThemeProvider>
+    </>
   );
 }
 
