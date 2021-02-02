@@ -1,5 +1,5 @@
-import PropTypes from "prop-types";
-import styled, { css } from "styled-components";
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
 const Button = styled.button`
   background-color: ${({ theme }) => theme.colors.secondary};
@@ -24,7 +24,7 @@ const Button = styled.button`
   }
 
   &:disabled {
-    background-color: #979797;
+    /* background-color: #000000; */
     opacity: 0.6;
     cursor: not-allowed;
   }
@@ -33,6 +33,6 @@ const Button = styled.button`
 export default Button;
 
 Button.propTypes = {
-  type: PropTypes.oneOf(["submit", "type", "button"]).isRequired,
+  type: PropTypes.oneOf(['submit', 'type', 'button']).isRequired,
   children: PropTypes.node.isRequired,
 };

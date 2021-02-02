@@ -36,4 +36,4 @@ Input.propTypes = {
 
 Input.defaultProps = {
   value: '',
-}
+};

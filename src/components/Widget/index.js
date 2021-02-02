@@ -16,12 +16,15 @@ const Widget = styled.div`
     font-weight: 700;
     line-height: 1;
     margin: 0;
+    color: ${({ theme }) => theme.colors.contrastText};
   }
 
   p {
     font-size: 14px;
     font-weight: 400;
     line-height: 1;
+    color: ${({ theme }) => theme.colors.contrastText};
+  
   }
 `;
 Widget.Header = styled.div`

@@ -100,6 +100,7 @@ function QuestionWidget({
             // Retorno
             return (
               <Widget.Topic
+                as="label"
                 key={alternativeId}
                 htmlFor={alternativeId}
                 data-selected={isSelected}
