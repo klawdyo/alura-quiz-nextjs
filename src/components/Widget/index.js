@@ -5,6 +5,7 @@ const Widget = styled.div`
   margin-bottom: 24px;
   border: 1px solid ${({ theme }) => theme.colors.primary};
   background-color: ${({ theme }) => theme.colors.mainBg};
+  color: ${({ theme }) => theme.colors.contrastText};
   border-radius: 4px;
   overflow: hidden;
   /* padding:8px 24px; */
@@ -16,14 +17,14 @@ const Widget = styled.div`
     font-weight: 700;
     line-height: 1;
     margin: 0;
-    color: ${({ theme }) => theme.colors.contrastText};
+    /* color: ${({ theme }) => theme.colors.contrastText}; */
   }
 
   p, ul, li {
     font-size: 14px;
     font-weight: 400;
     line-height: 1;
-    color: ${({ theme }) => theme.colors.contrastText};
+    /* color: ${({ theme }) => theme.colors.contrastText}; */
   
   }
 `;
