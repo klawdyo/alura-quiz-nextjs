@@ -11,6 +11,8 @@ import QuizBackground from '../src/components/QuizBackground';
 import QuizLogo from '../src/components/QuizLogo';
 import QuizContainer from '../src/components/QuizContainer';
 import Widget from '../src/components/Widget';
+import Link from '../src/components/Link';
+
 
 export default function Home() {
   // Os hooks precisam estar fora das funções
@@ -53,7 +55,7 @@ export default function Home() {
                 const rgx = /https:\/\/([0-9a-z_-]+)\.([0-9a-z_-]+)\.vercel\.app\/?/ig;
                 const [, user = null, project = null] = [...url.matchAll(rgx)][0] || [];
                 return (
-                  <li key={`${user}__${project}`}><Widget.Topic href={url}>{user}/{project}</Widget.Topic></li>
+                  <li key={`${project}__${user}`}><Widget.Topic as={Link} href={`/quiz/${project}___${user}`}>{user}/{project}</Widget.Topic></li>
                 );
               })}
             </ul>
