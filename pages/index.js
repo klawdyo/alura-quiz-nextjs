@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 
+import { motion } from 'framer-motion';
+
 import db from '../db.json';
 
 import Footer from '../src/components/Footer';
@@ -12,7 +14,6 @@ import QuizLogo from '../src/components/QuizLogo';
 import QuizContainer from '../src/components/QuizContainer';
 import Widget from '../src/components/Widget';
 import Link from '../src/components/Link';
-
 
 export default function Home() {
   // Os hooks precisam estar fora das funções
@@ -31,7 +32,16 @@ export default function Home() {
     <QuizBackground backgroundImage={db.bg}>
       <QuizContainer>
         <QuizLogo color={db.theme.colors.contrastText} />
-        <Widget>
+        <Widget
+          as={motion.section}
+          transition={{ duration: 0.3, delay: 0 }}
+          variants={{
+            show: { opacity: 1, x: '0' },
+            hidden: { opacity: 0, x: '-20%' },
+          }}
+          initial="hidden"
+          animate="show"
+        >
           <Widget.Header>
             <h1>{db.title}</h1>
           </Widget.Header>
@@ -47,7 +57,16 @@ export default function Home() {
             </form>
           </Widget.Content>
         </Widget>
-        <Widget>
+        <Widget
+          as={motion.section}
+          transition={{ duration: 0.3, delay: 0.2 }}
+          variants={{
+            show: { opacity: 1, x: '0' },
+            hidden: { opacity: 0, x: '-20%' },
+          }}
+          initial="hidden"
+          animate="show"
+        >
           <Widget.Content>
             <h1>Quizes da galera</h1>
             <ul>
@@ -61,7 +80,16 @@ export default function Home() {
             </ul>
           </Widget.Content>
         </Widget>
-        <Footer />
+        <Footer
+          as={motion.footer}
+          transition={{ duration: 0.3, delay: 0.4 }}
+          variants={{
+            show: { opacity: 1, x: '0' },
+            hidden: { opacity: 0, x: '-20%' },
+          }}
+          initial="hidden"
+          animate="show"
+        />
       </QuizContainer>
       <GithubCorner projectUrl="https://github.com/klawdyo" />
     </QuizBackground>
