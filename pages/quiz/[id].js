@@ -10,12 +10,10 @@ function QuizDaGaleraPage({ externalDb }) {
     <>
       <Head>
         <title>{externalDb.title}</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta property="og:image" content={externalDb.bg} />
         <meta property="og:url" content={externalDb.external} />
         <meta property="og:title" content={externalDb.title} />
         <meta property="og:description" content={externalDb.description} />
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
           href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
           rel="stylesheet"
